@@ -1,0 +1,116 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  font-size: 100%;
+  background-color: teal;
+  letter-spacing: 1px;
+  font-family: "Roboto", serif;
+}
+body main {
+  min-width: 375px;
+  max-width: 500px;
+  background-color: #fff;
+  width: 50vw;
+  margin: 20px auto;
+  border-radius: 10px;
+}
+body main .c-info {
+  text-align: center;
+}
+body main .c-info__title {
+  font-size: 2rem;
+  padding: 20px 0;
+}
+body main .c-info__sub {
+  font-size: 1.2rem;
+  padding: 10px 0;
+}
+body main .c-todos {
+  margin: 20px 0;
+}
+body main .c-todos__input {
+  display: flex;
+}
+body main .c-todos__input-field {
+  flex-grow: 1;
+}
+body main .c-todos__icon {
+  cursor: pointer;
+  padding: 10px;
+  color: white;
+  background: lightblue;
+  transition: all ease-in-out 0.35s;
+}
+body main .c-todos__icon:hover {
+  transform: scale(1.2) rotate(360deg);
+  border-radius: 10px;
+  background-color: #adcee6;
+}
+body main .c-todos__item {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  align-items: center;
+}
+body main .c-todos__remove {
+  cursor: pointer;
+  transition: all ease-in-out 0.35s;
+}
+body main .c-todos__remove:hover {
+  transform: scale(1.2);
+}
+
+/*# sourceMappingURL=/main.77bb5cfd.css.map */
