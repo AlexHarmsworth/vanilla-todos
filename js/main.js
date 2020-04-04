@@ -1,8 +1,8 @@
-import { EVENT_TYPES, SELECTOS } from "./constants";
+import { EVENT_TYPES, SELECTORS } from "./constants";
 
 const getInput = () => {
   try {
-    const inputFieldEl = document.querySelector(SELECTOS.INPUT_FIELD);
+    const inputFieldEl = document.querySelector(SELECTORS.INPUT_FIELD);
     return inputFieldEl;
   } catch (error) {
     console.error("Failed to get input value", error);
@@ -48,7 +48,7 @@ const createTodoFragment = string => {
 
 const appendTodo = fragment => {
   try {
-    const todoContainer = document.querySelector(SELECTOS.TODO_CONTAINER);
+    const todoContainer = document.querySelector(SELECTORS.TODO_CONTAINER);
     todoContainer.appendChild(fragment);
   } catch (error) {
     console.error("Failed to append todo", error);
@@ -57,7 +57,7 @@ const appendTodo = fragment => {
 
 function removeTodo() {
   try {
-    this.closest(SELECTOS.TODO_ITEM).remove();
+    this.closest(SELECTORS.TODO_ITEM).remove();
   } catch (error) {
     console.error("Failed to remove todo", error);
   }
@@ -72,7 +72,7 @@ const sumbitTodo = () => {
     const todoFrag = createTodoFragment(todoStr);
     attachEvent({
       context: todoFrag,
-      selector: SELECTOS.TODO_REMOVE,
+      selector: SELECTORS.TODO_REMOVE,
       type: EVENT_TYPES.CLICK,
       callback: removeTodo
     });
@@ -103,13 +103,13 @@ const init = () => {
   try {
     attachEvent({
       context: document,
-      selector: SELECTOS.ICON,
+      selector: SELECTORS.ICON,
       type: EVENT_TYPES.CLICK,
       callback: sumbitTodo
     });
     attachEvent({
       context: document,
-      selector: SELECTOS.INPUT_FIELD,
+      selector: SELECTORS.INPUT_FIELD,
       type: EVENT_TYPES.KEYPRESS,
       callback: sumbitTodo
     });

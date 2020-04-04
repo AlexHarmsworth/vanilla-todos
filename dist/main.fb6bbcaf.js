@@ -123,21 +123,21 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.SELECTOS = exports.EVENT_TYPES = void 0;
+exports.SELECTORS = exports.EVENT_TYPES = void 0;
 var EVENT_TYPES = {
   LOAD: "load",
   CLICK: "click",
   KEYPRESS: "keypress"
 };
 exports.EVENT_TYPES = EVENT_TYPES;
-var SELECTOS = {
+var SELECTORS = {
   INPUT_FIELD: ".c-todos__input-field",
   ICON: ".c-todos__icon",
   TODO_CONTAINER: ".c-todos__items",
   TODO_ITEM: ".c-todos__item",
   TODO_REMOVE: ".c-todos__remove"
 };
-exports.SELECTOS = SELECTOS;
+exports.SELECTORS = SELECTORS;
 },{}],"js/main.js":[function(require,module,exports) {
 "use strict";
 
@@ -145,7 +145,7 @@ var _constants = require("./constants");
 
 var getInput = function getInput() {
   try {
-    var inputFieldEl = document.querySelector(_constants.SELECTOS.INPUT_FIELD);
+    var inputFieldEl = document.querySelector(_constants.SELECTORS.INPUT_FIELD);
     return inputFieldEl;
   } catch (error) {
     console.error("Failed to get input value", error);
@@ -188,7 +188,7 @@ var createTodoFragment = function createTodoFragment(string) {
 
 var appendTodo = function appendTodo(fragment) {
   try {
-    var todoContainer = document.querySelector(_constants.SELECTOS.TODO_CONTAINER);
+    var todoContainer = document.querySelector(_constants.SELECTORS.TODO_CONTAINER);
     todoContainer.appendChild(fragment);
   } catch (error) {
     console.error("Failed to append todo", error);
@@ -197,7 +197,7 @@ var appendTodo = function appendTodo(fragment) {
 
 function removeTodo() {
   try {
-    this.closest(_constants.SELECTOS.TODO_ITEM).remove();
+    this.closest(_constants.SELECTORS.TODO_ITEM).remove();
   } catch (error) {
     console.error("Failed to remove todo", error);
   }
@@ -212,7 +212,7 @@ var sumbitTodo = function sumbitTodo() {
     var todoFrag = createTodoFragment(todoStr);
     attachEvent({
       context: todoFrag,
-      selector: _constants.SELECTOS.TODO_REMOVE,
+      selector: _constants.SELECTORS.TODO_REMOVE,
       type: _constants.EVENT_TYPES.CLICK,
       callback: removeTodo
     });
@@ -250,13 +250,13 @@ var init = function init() {
   try {
     attachEvent({
       context: document,
-      selector: _constants.SELECTOS.ICON,
+      selector: _constants.SELECTORS.ICON,
       type: _constants.EVENT_TYPES.CLICK,
       callback: sumbitTodo
     });
     attachEvent({
       context: document,
-      selector: _constants.SELECTOS.INPUT_FIELD,
+      selector: _constants.SELECTORS.INPUT_FIELD,
       type: _constants.EVENT_TYPES.KEYPRESS,
       callback: sumbitTodo
     });
@@ -294,7 +294,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52630" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53352" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

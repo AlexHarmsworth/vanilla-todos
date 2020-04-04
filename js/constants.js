@@ -4,7 +4,7 @@ export const EVENT_TYPES = {
   KEYPRESS: "keypress"
 };
 
-export const SELECTOS = {
+export const SELECTORS = {
   INPUT_FIELD: ".c-todos__input-field",
   ICON: ".c-todos__icon",
   TODO_CONTAINER: ".c-todos__items",
